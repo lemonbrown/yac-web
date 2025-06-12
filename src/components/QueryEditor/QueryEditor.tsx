@@ -244,7 +244,7 @@ const QueryEditor: React.FC<QueryEditorProps> = ({
           className="absolute inset-0 p-4 font-mono text-sm pointer-events-none overflow-auto whitespace-pre-wrap break-words"
           style={{ 
             color: 'transparent',
-            caretColor: 'transparent',
+            caretColor: '#111', // Or any visible color
             lineHeight: '1.5'
           }}
         >
@@ -258,13 +258,12 @@ const QueryEditor: React.FC<QueryEditorProps> = ({
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
           onScroll={handleScroll}
-          className="absolute inset-0 w-full h-full p-4 resize-none font-mono text-sm bg-transparent text-transparent caret-gray-900 dark:caret-gray-100 outline-none overflow-auto whitespace-pre-wrap break-words"
+          className="absolute inset-0 w-full h-full p-4 resize-none font-mono text-sm bg-transparent caret-gray-900 dark:caret-gray-100 outline-none overflow-auto whitespace-pre-wrap break-words"
           style={{ 
             lineHeight: '1.5',
             caretColor: 'currentColor'
           }}
-          placeholder="-- Write your YQL query here
--- Try typing: SELECT name FROM players WHERE position = 'QB'"
+          placeholder="--players name, season in afcwest where record > .500 between 2020 and now"
           spellCheck={false}
         />
         

@@ -14,7 +14,7 @@ export interface AutocompleteItem {
 
 // YQL Keywords
 export const YQL_KEYWORDS = [
-  'SELECT', 'FROM', 'WHERE', 'JOIN', 'INNER', 'LEFT', 'RIGHT', 'OUTER',
+  'PLAYERS', 'FROM', 'WHERE', 'JOIN', 'INNER', 'LEFT', 'RIGHT', 'OUTER',
   'GROUP', 'BY', 'ORDER', 'HAVING', 'LIMIT', 'OFFSET', 'DISTINCT',
   'COUNT', 'SUM', 'AVG', 'MIN', 'MAX', 'AND', 'OR', 'NOT', 'IN',
   'LIKE', 'BETWEEN', 'IS', 'NULL', 'AS', 'ON', 'UNION', 'ALL',

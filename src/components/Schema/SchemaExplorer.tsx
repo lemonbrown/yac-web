@@ -48,7 +48,7 @@ const SchemaExplorer: React.FC = () => {
       ]
     },
     {
-      name: 'player_stats',
+      name: 'seasons',
       columns: [
         { name: 'stat_id', type: 'INTEGER', isPrimary: true, isForeign: false },
         { name: 'player_id', type: 'INTEGER', isPrimary: false, isForeign: true, references: { table: 'players', column: 'player_id' } },
@@ -65,7 +65,19 @@ const SchemaExplorer: React.FC = () => {
       ]
     },
     {
-      name: 'stadiums',
+      name: 'conditions',
+      columns: [
+        { name: 'stadium_id', type: 'INTEGER', isPrimary: true, isForeign: false },
+        { name: 'name', type: 'VARCHAR(100)', isPrimary: false, isForeign: false },
+        { name: 'city', type: 'VARCHAR(100)', isPrimary: false, isForeign: false },
+        { name: 'state', type: 'VARCHAR(2)', isPrimary: false, isForeign: false },
+        { name: 'capacity', type: 'INTEGER', isPrimary: false, isForeign: false },
+        { name: 'surface_type', type: 'VARCHAR(50)', isPrimary: false, isForeign: false },
+        { name: 'roof_type', type: 'VARCHAR(50)', isPrimary: false, isForeign: false },
+      ]
+    },
+    {
+      name: 'aggregates',
       columns: [
         { name: 'stadium_id', type: 'INTEGER', isPrimary: true, isForeign: false },
         { name: 'name', type: 'VARCHAR(100)', isPrimary: false, isForeign: false },
@@ -92,11 +104,11 @@ const SchemaExplorer: React.FC = () => {
   
   return (
     <div className="p-2">
-      <div className="flex items-center mb-3 text-sm font-medium text-gray-700 dark:text-gray-300">
+      {/* <div className="flex items-center mb-3 text-sm font-medium text-gray-700 dark:text-gray-300">
         <Database size={16} className="mr-2" />
-        <span>NFL Database</span>
+        <span>Football Database</span>
       </div>
-      
+       */}
       <div className="space-y-1">
         {mockSchema.map((table) => (
           <div key={table.name} className="text-sm">

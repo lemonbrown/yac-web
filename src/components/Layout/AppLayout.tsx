@@ -24,11 +24,8 @@ const AppLayout: React.FC = () => {
     setIsExecuting(true);
     
     try {
-      // In a real app, this would be an API call to execute the query
-      // For now, we'll simulate a response with mock data
-      await new Promise(resolve => setTimeout(resolve, 800));
 
-      const response = await fetch('http://localhost:5000/yql', {
+      const response = await fetch('https://localhost:50572/yql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -37,9 +34,15 @@ const AppLayout: React.FC = () => {
       });
 
       const result: any[] = await response.json();
+
+      // Find the object with the most keys
+      const widest = result.reduce((max, curr) => {
+        return Object.keys(curr).length > Object.keys(max).length ? curr : max;
+      }, result[0]);
+
       
       const mockResult: QueryResult = {
-        columns: Object.keys(result[0]),
+        columns: Object.keys(widest),
         rows: result,
         executionTime: 0.12,
         rowCount: 5

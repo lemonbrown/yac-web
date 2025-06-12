@@ -81,7 +81,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigateToEditor }) => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Query professional football data with <strong>YQL</strong> (Your Query Language) — 
+              Query professional football data with <strong>YQL</strong> (yac query language) — 
               a SQL-like syntax designed specifically for football analytics
             </p>
             
@@ -173,9 +173,6 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigateToEditor }) => {
 
             {/* Call to Action */}
             <div className="text-center pt-8 border-t border-gray-200 dark:border-gray-700">
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Ready for more advanced features?
-              </p>
               <button
                 onClick={onNavigateToEditor}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"

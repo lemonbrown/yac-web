@@ -42,7 +42,7 @@ const Sidebar: React.FC = () => {
           title="Database Schema"
         >
           <Database size={18} />
-          {isExpanded && <span className="ml-2">Schema</span>}
+          {isExpanded && <span className="ml-2">Concepts</span>}
         </button>
         
         <button
@@ -54,14 +54,14 @@ const Sidebar: React.FC = () => {
           {isExpanded && <span className="ml-2">History</span>}
         </button>
         
-        <button
+        {/* <button
           className={`flex items-center justify-center py-3 flex-1 transition-colors duration-200 ${activeTab === 'saved' ? 'text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400' : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
           onClick={() => setActiveTab('saved')}
           title="Saved Queries"
         >
           <Star size={18} />
           {isExpanded && <span className="ml-2">Saved</span>}
-        </button>
+        </button> */}
       </div>
       
       <div className={`flex-1 overflow-y-auto ${isExpanded ? 'block' : 'hidden'}`}>
